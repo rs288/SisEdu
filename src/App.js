@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import {React, Fragment} from 'react';
+import {BrowserRouter as Router,Switch, Route, Link} from 'react-router-dom';
+import LoginForm from './components/LoginForm'
+import InitialContainer from './components/InitialContainer'
+import './styles/App.css'
+import MainFeed from './components/MainFeed';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path = '/feed'>
+            <div className = "feed-container">
+              <Header/>
+              <Sidebar/>
+              <div>
+                <p>Contenido mi buen</p>
+              </div>
+            </div>
+          </Route>
+          <Route path = '/' exact>
+              <InitialContainer/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
