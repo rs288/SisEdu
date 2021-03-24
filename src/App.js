@@ -1,9 +1,7 @@
-import {React, Fragment} from 'react';
-import {BrowserRouter as Router,Switch, Route, Link} from 'react-router-dom';
-import LoginForm from './components/LoginForm'
+import {React} from 'react';
+import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
 import InitialContainer from './components/InitialContainer'
 import './styles/App.css'
-import MainFeed from './components/MainFeed';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 
