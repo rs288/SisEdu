@@ -4,8 +4,8 @@ import '../styles/Feed.css'
 
 function MailCard() {
     return (
-        <div className = "mail-card">
-            <BiIcons.BiUserCircle className = "mail-user"/>
+        <div className = "card">
+            <BiIcons.BiUserCircle className = "card-icon"/>
             <div className = "card-information">
                 <h2>Juan Ramos</h2>
                 <h3>Actividad 2 Ciencias Naturales</h3>

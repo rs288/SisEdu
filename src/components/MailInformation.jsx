@@ -5,7 +5,7 @@ import '../styles/Feed.css'
 function MailInformation() {
     return (
         <div className = "info-card">
-            <BiIcons.BiUserCircle className = "mail-user"/>
+        <BiIcons.BiUserCircle className = "card-icon"/>
             <div className = "student-info">
                 <p>Alumno : Sergio Ramos</p>
                 <p>Curso: Ciencias Naturales V1</p>

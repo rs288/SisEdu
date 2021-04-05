@@ -7,6 +7,10 @@ import Sidebar from './components/Sidebar';
 import MailCard from './components/MailCard';
 import MailInformation from './components/MailInformation';
 import MailContent from './components/MailContent';
+import TareaCard from './components/TareaCard';
+import TareaForm from './components/TareaForm';
+import GroupCard from './components/GroupCard';
+import Calendar from 'react-calendar';
 
 function App() {
   return (
@@ -36,7 +40,10 @@ function App() {
               <Header/>
               <Sidebar/>
               <div className = "general-view">
-                <h2> Todos los grupos</h2>
+                <GroupCard/>
+                <GroupCard/>
+                <GroupCard/>
+                <GroupCard/>
               </div>
               <div className = "specific-view">
                 <h2>Info de los grupos</h2>
@@ -48,10 +55,13 @@ function App() {
             <Header/>
             <Sidebar/>
               <div className = "general-view">
-                <h2>Todas las tareas</h2>
-              </div>
+                <TareaCard/>
+                <TareaCard/>
+                <TareaCard/>
+                <TareaCard/>
+                </div>
               <div className = "specific-view">
-                <h2>Asignacion de tareas</h2>
+                <TareaForm/>
               </div>
             </div>
           </Route>
@@ -60,11 +70,10 @@ function App() {
               <Header/>
               <Sidebar/>
               <div className = "general-view">
-                <h2>Aqui va el calendario</h2>
+                <Calendar/>
               </div>
               <div className = "specific-view">
                 <h2>Manejo del calendario</h2>
-
               </div>
             </div>
           </Route>
