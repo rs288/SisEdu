@@ -1,6 +1,6 @@
 import {React, useState} from 'react'
 import "../styles/Login.css"
-import imagenCorreo from '../assets/logoCorreo.png'
+import imagenCorreo from '../assets/sisedu.png'
 import FormsContainer from './FormsContainer'
 
 function InitialContainer() {

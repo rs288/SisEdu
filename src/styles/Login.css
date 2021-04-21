@@ -1,8 +1,10 @@
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    
 }
 .container {
-    background-color: rgb(183, 183, 231);
+    background-color: #D7F0EA;
     min-height: 600px;
     display: flex;
     flex-direction: row;
@@ -10,7 +12,12 @@
     justify-content: flex-end;
     margin-top: 150px;
     border-radius: 20px;
+    margin-right: 200px;
 
+}
+h1 {
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 50px;
 }
 
 .loginForm{
@@ -25,33 +32,45 @@
 .mailImage {
     width: 300px;
     height: 300px;
-    margin-right: auto;
-    margin-left:150px
+    margin:100px
 }
 
 .link{
-    color:red;
+    color:rgb(12, 12, 224);
+    margin-right: 40px;
+
 }
 input {
     padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    margin-bottom: 35px;
+    border-radius: 5px;
     width: 80%;
+    background-color: #F9F3F3;
+    border: none;
+    
     
 }
 
 button {
-    background-color: rgb(143, 191, 233);
+    background-color: #FFDD94;
+    margin-top: 20px;
     padding: 10px;
     border: none;
     border-radius: 10px;
+    margin-bottom: 20px;
+    
 
 }
 
+p {
+    margin-right: auto;
+    margin-left: 25px;
+}
+
 button:hover{
-    background-color: rgb(57, 143, 219);
+    background-color: #ffbb29;
     cursor: pointer;
-    color: rgb(212, 212, 212);
+    color: rgb(253, 253, 253);
     transition: 100ms;
 
 }

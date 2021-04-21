@@ -7,14 +7,21 @@ function SignUpForm() {
         <Fragment> 
         <form className = "loginForm">
             <h1>Registro Sis Edu</h1>
+            <p>Correo Electronico</p>
             <input type="text"
-            placeholder = 'Ingresar Correo Electronico'
+            placeholder = 'ejemplo@gmail.com'
             />
+            <p>Nombre</p>
+            <input type="text"
+            placeholder = 'Mra. Juana Ramirez'
+            />
+            <p>Contraseña</p>
             <input type="password"
-            placeholder = 'Contraseña'
+            placeholder = '********'
             />
+            <p>Confirme su Contraseña</p>
             <input type = "password"
-            placeholder = 'Confirmar Contraseña'
+            placeholder = '********'
             />
             <Link to = "/feed">
                 <button>Registrarse</button>
