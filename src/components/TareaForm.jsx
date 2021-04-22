@@ -26,7 +26,7 @@ function TareaForm(props) {
         event.preventDefault();
 
         //LIMPIAR CAMPOS
-        setData(tareaData === "");
+        
     }
 
     return (

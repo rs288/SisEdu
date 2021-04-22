@@ -13,6 +13,7 @@ import Calendar from 'react-calendar';
 import EmailContainer from './components/EmailContainer';
 import {v4 as uuidv4} from 'uuid';
 import TareasContainer from './components/TareasContainer';
+import GroupsContainer from './components/GroupsContainer';
 
 function App() {
 
@@ -44,19 +45,7 @@ function App() {
             </div>
           </Route>
           <Route path = '/grupos'>
-            <div className = "feed-container">
-              <Header/>
-              <Sidebar/>
-              <div className = "general-view">
-                <GroupCard/>
-                <GroupCard/>
-                <GroupCard/>
-                <GroupCard/>
-              </div>
-              <div className = "specific-view">
-                <h2>Info de los grupos</h2>
-              </div>
-            </div>
+            <GroupsContainer/>
           </Route>
           <Route path = '/tareas'>
                <TareasContainer/>
