@@ -157,3 +157,14 @@ button:hover {
     color: black;
 }
 
+/*TAREAS*/
+.tareas-form {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.tareas-form h1 {
+    margin-bottom: 10px;
+}

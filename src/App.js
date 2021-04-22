@@ -1,18 +1,31 @@
-import {React} from 'react';
+import {React, useState} from 'react';
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
 import InitialContainer from './components/InitialContainer'
 import './styles/App.css'
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import MailCard from './components/MailCard';
 import MailInformation from './components/MailInformation';
 import MailContent from './components/MailContent';
 import TareaCard from './components/TareaCard';
 import TareaForm from './components/TareaForm';
 import GroupCard from './components/GroupCard';
 import Calendar from 'react-calendar';
+import EmailContainer from './components/EmailContainer';
+import {v4 as uuidv4} from 'uuid';
+import TareasContainer from './components/TareasContainer';
 
 function App() {
+
+  const mailData = [ 
+    {id: uuidv4() , name: 'Juan Herrera', tarea: 'Actividad #2', materia: 'Ciencias Naturales', grupo: 52},
+    {id: uuidv4() , name: 'Valeria Zamora', tarea: 'Ejercicios Suma y Resta', materia: 'Matematicas', grupo: 24},
+    {id: uuidv4() , name: 'Ernesto Fonseca', tarea: 'Resumen Etapa 2', materia: 'Historia ', grupo: 61},
+  ]
+
+  const [mails, setMail] = useState(mailData);
+  
+
+
   return (
     <Router>
       <div className="App">
@@ -22,12 +35,7 @@ function App() {
               <Header/>
               <Sidebar/>
                 <div className = "general-view">
-                  <MailCard/>
-                  <MailCard/>
-                  <MailCard/>
-                  <MailCard/>
-                  <MailCard/>
-                  <MailCard/>
+                  <EmailContainer mails = {mails}/>
                 </div>
                 <div className = "specific-view">
                   <MailInformation/>
@@ -51,19 +59,7 @@ function App() {
             </div>
           </Route>
           <Route path = '/tareas'>
-            <div className = "feed-container">
-            <Header/>
-            <Sidebar/>
-              <div className = "general-view">
-                <TareaCard/>
-                <TareaCard/>
-                <TareaCard/>
-                <TareaCard/>
-                </div>
-              <div className = "specific-view">
-                <TareaForm/>
-              </div>
-            </div>
+               <TareasContainer/>
           </Route>
           <Route path = '/calendario'>
             <div className = "feed-container">
