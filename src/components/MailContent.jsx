@@ -10,8 +10,8 @@ function MailContent() {
                 buena tarde 
             </p>
             <button className = "download-button"> <BsIcons.BsDownload/> Act2C.N.V1S2.pdf</button>
-            <button className = "revision-button" 
-            >Revisar Actividad </button>
+            <button className = "revision-button">Revisar Actividad </button>
+            
 
             
         </div>

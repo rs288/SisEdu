@@ -35,12 +35,8 @@ function App() {
             <div className = "feed-container">
               <Header/>
               <Sidebar/>
-                <div className = "general-view">
+                <div >
                   <EmailContainer mails = {mails}/>
-                </div>
-                <div className = "specific-view">
-                  <MailInformation/>
-                  <MailContent/>
                 </div>
             </div>
           </Route>

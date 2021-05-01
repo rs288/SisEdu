@@ -11,6 +11,7 @@ function GroupsContainer() {
         {id:uuidv4(), grupo: 52, materia: "Ciencias Naturales", alumnosActivos: 10}
     ]
 
+    
     const [groups, setGroups] = useState(groupData)
         //AGREGAR TAREAS NUEVAS
         const agregarGrupo = (grupo) => {
@@ -21,6 +22,12 @@ function GroupsContainer() {
             ])
     
         }
+    const displayInformation = (e) => {
+        e.preventDefault()
+        console.log('hiciste clic en una carta we')
+
+
+    }
     return (
         <div className = "feed-container">
             <Header/>
@@ -28,8 +35,7 @@ function GroupsContainer() {
             <div className = "general-view">
                 {
                     groups.map(group => (
-                        <GroupCard key = {group.id} group = {group} />
-
+                        <GroupCard key = {group.id} group = {group} onClick = {displayInformation}/>
                     ))
                 }
             </div>

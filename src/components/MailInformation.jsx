@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import * as BiIcons from 'react-icons/bi'
 import '../styles/Feed.css'
 
-function MailInformation() {
+
+function MailInformation(props) {
     return (
-        <div className = "info-card">
+        <div className = "info-card" >
             <div className = "student-info">
-                <p>Alumno : Sergio Ramos</p>
-                <p>Curso: Ciencias Naturales V1</p>
-                <p>Tarea : Actividad Fundamental #2</p>
-                <p>Recibido: 10/03/2021 10:30:33 p.m</p>
+                <p></p>
+                <p>Curso: </p>
+                <p>Tarea </p>
             </div>
         </div>
     )
 }
- 
 export default MailInformation
+
