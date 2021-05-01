@@ -6,7 +6,7 @@ function EmailContainer(props) {
 
     return (
         <div>
-            <div className = "card">
+            <div className = "mail-card">
             {
                 props.mails.map(mail => (
                     <MailCard key= {mail.id} mail = {mail}/>

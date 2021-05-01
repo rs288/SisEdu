@@ -46,7 +46,7 @@ const revision =(
         <br/>
         <label>Materia: {props.mail.materia}</label>
         <br/>
-        <label>Grupos: {props.mail.grupo}</label>
+        <label>Grupo: {props.mail.grupo}</label>
         <br/>
         <br/>
         <label>Calificacion</label>
@@ -66,7 +66,7 @@ const revision =(
 )
     return (
         
-        <div className = "card" onClick = {openCloseModal}>
+        <div className = "mail-card" onClick = {openCloseModal}>
             <BiIcons.BiUserCircle className = "card-icon"/>
             <div className = "card-information">
                 <h3>{props.mail.tarea}</h3>
