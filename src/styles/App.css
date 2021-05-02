@@ -29,7 +29,7 @@
 .general-view {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 30%;
     height: 700px;
     background-color: #FCFCF4; 
 }

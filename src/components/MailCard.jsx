@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import * as BiIcons from 'react-icons/bi'
 import '../styles/Feed.css'
 import {Modal,TextField, Button } from '@material-ui/core'
-import MailInformation from './MailInformation';
 import {makeStyles} from '@material-ui/core/styles'
 
 
@@ -13,10 +12,11 @@ function MailCard(props) {
         tarea: props.mail.tarea
     }
 
+    const [modalIsOpen, setModalOpen] = useState(false);
+
     const openCloseModal = () => {
         setModalOpen(!modalIsOpen);
     }
-    const [modalIsOpen, setModalOpen] = useState(false);
     
 const useStyles = makeStyles((theme)=>({
     modal: {
@@ -59,13 +59,14 @@ const revision =(
         <br/>
         <TextField label = "retroalimentacion"/>
             <br/>
-        <div align = "center">      
+        <div align = "center">   
+        <button> Descargar Archivo</button>   
         <button onClick = {openCloseModal}>Revisar tarea</button>
         </div>   
     </div>
 )
     return (
-        
+    <div>
         <div className = "mail-card" onClick = {openCloseModal}>
             <BiIcons.BiUserCircle className = "card-icon"/>
             <div className = "card-information">
@@ -74,6 +75,7 @@ const revision =(
                 <h3>{props.mail.materia}</h3>
                 <h3>Grupo {props.mail.grupo}</h3>
             </div>
+            </div>
             <Modal
             open = {modalIsOpen}
             onClose = {setModalOpen}
@@ -81,6 +83,7 @@ const revision =(
                 {revision}
             </Modal>
         </div>
+      
     )
 }
 

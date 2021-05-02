@@ -7,13 +7,14 @@ function TareaCard(props) {
         <div className = "card">
         <BiIcons.BiTask className = "card-icon"/>
         <div class = "card-information">
-            <h3>{props.tarea.nombreAct}</h3>
-            <h3>{props.tarea.materia}</h3>
-            <h3>{props.tarea.grupo}</h3>
-            <h3>{props.tarea.fechaEntrega}</h3>
+            <h3>Actividad: {props.tarea.nombreAct}</h3>
+            <h3>Materia: {props.tarea.materia}</h3>
+            <h3>Grupo: {props.tarea.grupo}</h3>
+            <h3>Fecha de entrega: {props.tarea.fechaEntrega}</h3>
         </div>
         </div>
     )
 }
 
 export default TareaCard
+
