@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import * as BiIcons from 'react-icons/bi'
 import '../styles/Feed.css'
-import {Modal,TextField, Button } from '@material-ui/core'
+import {Modal,TextField, Button, Snackbar } from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
+import {ToastContainer, toast} from 'react-toastify'
+
 
 
 function MailCard(props) {
@@ -11,11 +13,18 @@ function MailCard(props) {
         materia: props.mail.materia,
         tarea: props.mail.tarea
     }
-
     const [modalIsOpen, setModalOpen] = useState(false);
-
+    const [snackbarIsOpen, setSnackbar] = useState(false);
+    
     const openCloseModal = () => {
+        if (modalIsOpen === true){
+            openCloseSnackbar();
+        }
         setModalOpen(!modalIsOpen);
+    }
+
+    function openCloseSnackbar(){
+        setSnackbar(!snackbarIsOpen);
     }
     
 const useStyles = makeStyles((theme)=>({
@@ -35,6 +44,7 @@ const useStyles = makeStyles((theme)=>({
     }
 }))
 const styles = useStyles();
+/*VENTANA DE REVISION*/ 
 const revision =(
     <div className = {styles.modal}>
         <div align = 'center'>
@@ -51,7 +61,6 @@ const revision =(
         <br/>
         <label>Calificacion</label>
         <br/>
-        
         <TextField label = "0/100"/>
             <br/>
             <br/>
@@ -63,6 +72,13 @@ const revision =(
         <button> Descargar Archivo</button>   
         <button onClick = {openCloseModal}>Revisar tarea</button>
         </div>   
+    </div>
+)
+
+/*ALERTA DE TAREA COMPLETADA*/
+const revisado =( 
+    <div>
+        <h1>Revisado mi buen</h1>
     </div>
 )
     return (
@@ -82,6 +98,9 @@ const revision =(
             >
                 {revision}
             </Modal>
+            <Snackbar open = {snackbarIsOpen} onClose = {setSnackbar}
+            message = "Tarea Revisada con Éxito"
+            autoHideDuration = {2000}></Snackbar>
         </div>
       
     )
