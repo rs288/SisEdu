@@ -43,8 +43,8 @@ function TareaForm(props) {
                 <label> Fecha de entrega:</label>
                 <input type="text" value = {tareaData.fechaEntrega} name = "fechaEntrega" onChange = {handleChange}/>
                 <label>Agregar Recursos</label>
-                <button><GrIcons.GrDocumentUpload/></button>
-                <button type = "submit" value = "Submit">Crear Tarea</button>
+                <button className = "form-button"><GrIcons.GrDocumentUpload/>Añadir Archivo</button>
+                <button className = "form-button" type = "submit" value = "Submit">Crear Tarea</button>
             </form>
     )
 }

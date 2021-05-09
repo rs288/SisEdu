@@ -4,6 +4,7 @@ import '../styles/Feed.css'
 import {Modal,TextField, Button, Snackbar } from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import {ToastContainer, toast} from 'react-toastify'
+import * as AiIcons from 'react-icons/ai'
 
 
 
@@ -52,9 +53,12 @@ const revision =(
         </div>
         <label>Alumno: {props.mail.name}</label>
         <br/>
+        <br/>
         <label>Tarea: {props.mail.tarea}</label>
         <br/>
+        <br/>
         <label>Materia: {props.mail.materia}</label>
+        <br/>
         <br/>
         <label>Grupo: {props.mail.grupo}</label>
         <br/>
@@ -69,8 +73,8 @@ const revision =(
         <TextField label = "retroalimentacion"/>
             <br/>
         <div align = "center">   
-        <button> Descargar Archivo</button>   
-        <button onClick = {openCloseModal}>Revisar tarea</button>
+        <button className = "form-button"><AiIcons.AiOutlineDownload/> Descargar Archivo</button>   
+        <button onClick = {openCloseModal} className = "form-button">Revisar tarea</button>
         </div>   
     </div>
 )
@@ -98,9 +102,10 @@ const revisado =(
             >
                 {revision}
             </Modal>
-            <Snackbar open = {snackbarIsOpen} onClose = {setSnackbar}
+            <Snackbar className="notification" open = {snackbarIsOpen} onClose = {setSnackbar}
             message = "Tarea Revisada con Éxito"
-            autoHideDuration = {2000}></Snackbar>
+            autoHideDuration = {1500}
+            ></Snackbar>
         </div>
       
     )

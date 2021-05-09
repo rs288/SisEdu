@@ -9,10 +9,9 @@ function Sidebar() {
             <nav>
                 <FiIcons.FiUser className = "user-icon"/>
                 <ul>
-                  <li> <Link to = '/feed'> <FiIcons.FiMail/> Bandeja Principal </Link> </li> 
-                  <li> <Link to = '/grupos'> <RiIcons.RiGroupLine/>Grupos </Link> </li>
-                  <li> <Link to = '/tareas'><RiIcons.RiTaskLine/>Tareas </Link> </li>
-                  <li> <Link to = '/calendario'> <RiIcons.RiCalendar2Fill/> Calendario </Link></li>
+                   <Link to = '/feed' className = "menuButton"> <FiIcons.FiMail/> Bandeja Principal </Link> 
+                   <Link to = '/grupos' className = "menuButton"> <RiIcons.RiGroupLine/>Grupos </Link> 
+                   <Link to = '/tareas'className = "menuButton"><RiIcons.RiTaskLine/>Tareas </Link> 
                   <li><FiIcons.FiSettings/>Configuracion</li>
                 </ul>
             </nav>
