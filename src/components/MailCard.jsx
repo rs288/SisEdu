@@ -16,9 +16,21 @@ function MailCard(props) {
     }
     const [modalIsOpen, setModalOpen] = useState(false);
     const [snackbarIsOpen, setSnackbar] = useState(false);
+    const [calificacion, setCalifacion] = useState('');
+    const [retroAlimentacion, setRetroAlimentacion] = useState('');
+
+    //FUNCION PARA MANEJAR CALIFICACION
+    const handleChange = (valor) => {
+        setCalifacion(valor.target.value);
+        console.log(calificacion)
+    }
     
+    //FUNCION PARA MANEJAR RETROALIMENTACION
+    const handleRetro = (valor) => {
+        setRetroAlimentacion(valor.target.value)
+    }
     const openCloseModal = () => {
-        if (modalIsOpen === true){
+        if (modalIsOpen === true && calificacion !='' && retroAlimentacion!= ''){
             openCloseSnackbar();
         }
         setModalOpen(!modalIsOpen);
@@ -48,8 +60,9 @@ const styles = useStyles();
 /*VENTANA DE REVISION*/ 
 const revision =(
     <div className = {styles.modal}>
-        <div align = 'center'>
+        <div className = "form-header">
             <h2>Revision</h2> 
+            <AiIcons.AiOutlineCloseSquare className= "close-button" onClick= {openCloseModal}/>
         </div>
         <label>Alumno: {props.mail.name}</label>
         <br/>
@@ -65,12 +78,12 @@ const revision =(
         <br/>
         <label>Calificacion</label>
         <br/>
-        <TextField label = "0/100"/>
+        <TextField label = "0/100" onChange = {handleChange}/>
             <br/>
             <br/>
         <label >Retroalimentacion de tarea</label>
         <br/>
-        <TextField label = "retroalimentacion"/>
+        <TextField label = "retroalimentacion" onChange = {handleRetro}/>
             <br/>
         <div align = "center">   
         <button className = "form-button"><AiIcons.AiOutlineDownload/> Descargar Archivo</button>   

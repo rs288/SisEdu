@@ -104,10 +104,9 @@ ul li:hover{
 /*MAIL CARDS STYLES*/
 .card {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-    height: 100px;
+    min-height: 100px;
     background-color: #FFDD94;
     border-bottom: 1px solid black;
     align-items: center;
@@ -144,6 +143,11 @@ ul li:hover{
 
 }
 
+.card-information{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
 
 
 /*MAIL INFO CARD*/
@@ -203,4 +207,21 @@ button:hover {
 /*FORMULARIO REVISION DE TAREAS*/
 .form-button {
     font-size: 20px;
+}
+
+.form-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button{
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+}
+.close-button:hover{
+    cursor: pointer;
 }
