@@ -5,8 +5,9 @@ import TareaForm from './TareaForm';
 import '../styles/App.css';
 import Header from './Header';
 import Sidebar from './Sidebar';
+import {fechaEntregaTarea} from './TareaForm'
 
-function TareasContainer() {
+function TareasContainer(props) {
     
     const tareasData = [
         {id: uuidv4(), nombreAct: "Resumen Etapa 2", materia: "Historia", grupo: 45, fechaEntrega: "20/03/2021"}
