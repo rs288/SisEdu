@@ -29,7 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "ebuild": "npm run build && node_modules/.bin/build",
-    "server":" python src/backend/SisEdu_django/manage.py runserver", 
+    "server":" python backend/manage.py runserver", 
     "dev": "concurrently \"npm run server\" \"npm run start\""
   },
   "eslintConfig": {
