@@ -1,10 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState,} from 'react'
+import axios from 'axios';
 
 function AddGroupForm(props) {
     const [groupData, setData] = useState({
         materia: "",
         grupo : "",
-        alumnosActivos: 0
+	hora:"",
+        alumnosActivos: 0,	 
     })
 
     const handleChange = (event) => {
@@ -12,12 +14,11 @@ function AddGroupForm(props) {
             ...groupData,
             [event.target.name] : event.target.value
         })
-        
     }
 
     const handleSubmit = (event) => {
-        props.agregarGrupo(groupData);
-        event.preventDefault();
+	props.agregarGrupo(groupData);         
+	event.preventDefault();
 
         //LIMPIAR CAMPOS
         
@@ -30,7 +31,10 @@ function AddGroupForm(props) {
                 <input type = "text" value = {groupData.grupo} name= "grupo" onChange = {handleChange}/>
                 <label>Materia: </label>
                 <input type="text" value = {groupData.materia} name = "materia" onChange = {handleChange}/>
-                <button type = "submit" value = "Submit">Crear Grupo</button>
+                <label>Hora: </label>
+		<input type="text" value = {groupData.hora} name = "hora" onChange = {handleChange}/> 
+	    	<button type = "submit" value = "Submit">Crear Grupo</button>
+	    	
             </form>
     )
 }

@@ -17,5 +17,5 @@ urlpatterns=[
     url(r'^alumno$',views.alumnoApi),
     url(r'^alumno/([0-9]+)$',views.alumnoApi),
 
-    url(r'^grupo/SaveFile$', views.SaveFile)
+    url(r'^tarea/SaveFile$', views.SaveFile)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

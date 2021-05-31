@@ -1,21 +1,18 @@
 import React, {useState} from 'react'
 import * as GrIcons from 'react-icons/gr'
 import '../styles/Feed.css';
-import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
-import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 import {TextField} from '@material-ui/core'
 
 function TareaForm(props) {
-
-    const [startDate, setStartDate] = useState(new Date());
+ 
     
     const [tareaData, setData] = useState({
-        nombreAct : "",
+        nombre : "",
         materia: "",
         grupo : "",
-        descripcion: "",
-        fechaEntrega: ""
+        descrip: "",
+        fecha: "",
+	file:""
     })
 
     const handleChange = (event) => {
@@ -28,10 +25,10 @@ function TareaForm(props) {
     const handleSubmit = (event) => {
         props.agregarTarea(tareaData);
         console.log(tareaData);
-        event.preventDefault();
+       	event.preventDefault();
         //LIMPIAR CAMPOS    
     }
-
+    
     return (
             <form className = "tareas-form" >
                 <h1> Asignacion de Tareas</h1>
@@ -44,12 +41,10 @@ function TareaForm(props) {
                 <label>Descripcion de la Actividad</label>
                 <input type="text" value = {tareaData.descripcion} name = "descripcion" onChange = {handleChange}/>
                 <label> Fecha de entrega:</label>
-                <DatePicker selected ={startDate} onSelect = {date => setStartDate(date)}
-
-                onChange = {date => setData({["fechaEntrega"] : [date.toLocaleDateString()]})}/>
-                <label>Agregar Recursos</label>
-                <button className = "form-button"><GrIcons.GrDocumentUpload/>Añadir Archivo</button>
-                <button className = "form-button" onClick={handleSubmit}>Crear Tarea</button>
+                <input type="date" value={tareaData.fecha} name = "fecha" onChange= {handleChange}/>
+	    	<label>Agregar Recursos</label>
+	    	<input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple onChange={handleChange} /> 
+	    	<button className = "form-button" onClick={handleSubmit}>Crear Tarea</button>
             </form>
     )
 }

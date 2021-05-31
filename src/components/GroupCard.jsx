@@ -10,7 +10,7 @@ function GroupCard(props) {
         <div class= "card-information">
             <h3>Grupo : {props.group.grupo}</h3>
             <h3>Materia: {props.group.materia}</h3>
-            <h3>Alumnos Activos: {props.group.alumnosActivos}</h3>
+            <h3>hora: {props.group.hora}</h3>
          </div>
         </div>
     )

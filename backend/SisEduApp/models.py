@@ -22,7 +22,7 @@ class Tarea(models.Model):
     Materia = models.CharField(max_length=100)
     Grupo = models.CharField(max_length=100)
     Descrip = models.CharField(max_length=100)
-    Fecha = models.DateField()
+    Fecha = models.CharField(max_length=100)
     Archivo = models.CharField(max_length=100)
 
 class Alumno(models.Model):

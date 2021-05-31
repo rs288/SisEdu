@@ -75,7 +75,7 @@ def tareaApi(request,id=0):
     if request.method=='GET':
         tarea = Tarea.objects.all()
         tarea_serializer = TareaSerializer(tarea, many=True)
-        return JsonResponse(Tarea_serializer.data, safe=False)
+        return JsonResponse(tarea_serializer.data, safe=False)
 
     elif request.method=='POST':
         tarea_data=JSONParser().parse(request)
