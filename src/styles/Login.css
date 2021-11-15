@@ -5,12 +5,12 @@
 }
 .container {
     background-color: #D7F0EA;
-    min-height: 600px;
+    /*min-height: 600px;*/
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    margin-top: 150px;
+    /*margin-top: 150px;*/
     border-radius: 20px;
     margin-right: 200px;
 

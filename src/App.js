@@ -1,5 +1,5 @@
 import {React, useState} from 'react';
-import {BrowserRouter as Router,Switch, Route} from 'react-router-dom';
+import {HashRouter as Router,Switch, Route} from 'react-router-dom';
 import InitialContainer from './components/InitialContainer'
 import './styles/App.css'
 import Header from './components/Header';

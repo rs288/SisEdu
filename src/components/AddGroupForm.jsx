@@ -26,7 +26,7 @@ function AddGroupForm(props) {
 
     return (
             <form onSubmit = {handleSubmit} className = "tareas-form" >
-                <h1> Añdir un grupo</h1>
+                <h1> Añadir un grupo</h1>
                 <label>Grupo:</label>
                 <input type = "text" value = {groupData.grupo} name= "grupo" onChange = {handleChange}/>
                 <label>Materia: </label>
